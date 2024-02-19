@@ -10,6 +10,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
         toolbarHeight: 100.0,
         backgroundColor: Colors.purple,
         elevation: 1,
@@ -34,23 +36,6 @@ class Home extends StatelessWidget {
       ),
       drawer: const DrawerCall(),
       body: const Body_New(),
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.feed),
-            label: 'Feed',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.shopping_bag),
-            label: 'Cart',
-          ),
-          NavigationDestination(icon: Icon(Icons.inbox), label: 'Inbox')
-        ],
-      ),
     );
   }
 }

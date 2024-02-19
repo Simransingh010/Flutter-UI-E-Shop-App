@@ -1,3 +1,4 @@
+import 'package:e_shop_clone/Screens/bottomNavigationBar.dart';
 import 'package:e_shop_clone/Screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 222, 149, 89)),
         useMaterial3: true,
       ),
-      home: Home(),
+      home: BottomNavBar(),
     );
   }
 }

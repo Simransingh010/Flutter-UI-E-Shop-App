@@ -11,10 +11,10 @@ class DrawerCall extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 170,
+              height: 116,
               width: 500,
               child: ListTile(
-                contentPadding: EdgeInsets.fromLTRB(10, 70, 10, 10),
+                contentPadding: EdgeInsets.fromLTRB(10, 29, 10, 10),
                 leading: CircleAvatar(
                   radius: 30,
                   backgroundImage: AssetImage('asset/Image/avatar.jpeg'),
@@ -144,6 +144,7 @@ class DrawerCall extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {},
+                    dense: true,
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     leading: Icon(
                       Icons.notifications,
@@ -160,6 +161,7 @@ class DrawerCall extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {},
+                    dense: true,
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     leading: Icon(
                       Icons.language,
@@ -176,6 +178,7 @@ class DrawerCall extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {},
+                    dense: true,
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     leading: Icon(
                       Icons.shortcut,
@@ -192,6 +195,7 @@ class DrawerCall extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {},
+                    dense: true,
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     leading: Icon(
                       Icons.design_services,
@@ -263,6 +267,7 @@ class DrawerCall extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {},
+                    dense: true,
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     leading: Icon(
                       Icons.logout,
