@@ -1,3 +1,4 @@
+import 'package:e_shop_clone/Screens/feedScreen.dart';
 import 'package:flutter/material.dart';
 
 class Body_New extends StatelessWidget {
@@ -305,17 +306,25 @@ class Body_New extends StatelessWidget {
                       left: 20,
                       right: 20,
                     ),
-                    child: Container(
-                      padding: EdgeInsets.only(
-                        left: 10,
-                        right: 5,
-                        top: 20,
-                        bottom: 20,
-                      ),
-                      child: Image.asset(
-                        'asset/Image/shoes.webp',
-                        cacheHeight: 100,
-                        cacheWidth: 100,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const FeedScreen()));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(
+                          left: 10,
+                          right: 5,
+                          top: 20,
+                          bottom: 20,
+                        ),
+                        child: Image.asset(
+                          'asset/Image/shoes.webp',
+                          cacheHeight: 100,
+                          cacheWidth: 100,
+                        ),
                       ),
                     ),
                   ),

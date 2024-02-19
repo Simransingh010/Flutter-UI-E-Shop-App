@@ -30,6 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
+    
+    
+  carousel_slider: ^4.2.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -65,7 +69,11 @@ flutter:
    - asset/Image/Chair.jpg
    - asset/Image/shoes.webp
    - asset/Image/guitar.webp
-
+   - asset/Image/airforce_pic_1.png
+   - asset/Image/airforce_pic_2.png
+   - asset/Image/airforce_pic_3.png
+   - asset/Image/airforce_pic_4.png
+   - asset/Image/airforce_pic_5.png
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
     

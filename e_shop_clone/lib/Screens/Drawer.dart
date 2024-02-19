@@ -6,6 +6,7 @@ class DrawerCall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.white,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(2, 0, 5, 10),
         child: Column(
