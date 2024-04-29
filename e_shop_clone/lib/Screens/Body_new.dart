@@ -1,4 +1,7 @@
 import 'package:e_shop_clone/Screens/feedScreen.dart';
+import 'package:e_shop_clone/Screens/items.dart';
+import 'package:e_shop_clone/Screens/items2.dart';
+import 'package:e_shop_clone/Screens/screen3.dart';
 import 'package:flutter/material.dart';
 
 class Body_New extends StatelessWidget {
@@ -8,55 +11,53 @@ class Body_New extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Container(
-          width: 500,
-          padding: EdgeInsets.only(top: 0, bottom: 15, left: 0, right: 0),
-          margin: EdgeInsets.only(
+          // width: MediaQuery.of(context).size.width * 0.6,
+          padding: const EdgeInsets.only(
+            top: 0,
+            bottom: 15,
+            left: 0,
+            right: 0,
+          ),
+          margin: const EdgeInsets.only(
             top: 25,
-            right: 45,
-            left: 50,
+            left: 20,
+            right: 20,
           ),
           decoration: BoxDecoration(
             color: Colors.purple,
             borderRadius: BorderRadius.circular(12.0),
           ),
-          child: IntrinsicHeight(
+          child: const IntrinsicHeight(
             child: Row(
               children: [
                 SizedBox(
                   height: 60,
                   width: 150,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      right: 0,
-                      left: 0,
-                      top: 0,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.wallet_rounded,
+                      color: Colors.white,
                     ),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.wallet_rounded,
+                    title: Text(
+                      'My Wallet',
+                      style: TextStyle(
+                        fontSize: 14,
                         color: Colors.white,
+                        fontWeight: FontWeight.w900,
                       ),
-                      title: Text(
-                        'My Wallet',
-                        style: TextStyle(
-                          fontSize: 14,
+                    ),
+                    subtitle: Text(
+                      'Rs 30,432',
+                      style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      subtitle: Text(
-                        'Rs 30,432',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.white,
-                            decorationThickness: 1,
-                            fontWeight: FontWeight.w500),
-                      ),
+                          fontSize: 12,
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
+                          decorationThickness: 1,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
                 ),
@@ -70,8 +71,8 @@ class Body_New extends StatelessWidget {
                   height: 60,
                   width: 160,
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 0, right: 0, top: 0, bottom: 10),
+                    padding:
+                        EdgeInsets.only(left: 0, right: 0, top: 0, bottom: 10),
                     child: ListTile(
                       leading: Icon(
                         Icons.money,
@@ -102,8 +103,8 @@ class Body_New extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
+        const Padding(
+          padding: EdgeInsets.only(
             right: 38,
             left: 38,
             top: 25,
@@ -134,76 +135,112 @@ class Body_New extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             top: 20,
-            left: 30,
-            right: 30,
+            left: 20,
+            right: 20,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Column(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.purple,
-                    radius: 25,
-                    child: Icon(
-                      Icons.wb_sunny_rounded,
-                      color: Colors.white,
-                      size: 35,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ItemScreen(),
+                      ));
+                },
+                child: const Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.purple,
+                      radius: 25,
+                      child: Icon(
+                        Icons.wb_sunny_rounded,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text('All'),
-                ],
+                    Text('All'),
+                  ],
+                ),
               ),
-              Column(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.purple,
-                    radius: 25,
-                    child: Icon(
-                      Icons.style_rounded,
-                      color: Colors.white,
-                      size: 35,
+              InkWell(
+                child: const Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.purple,
+                      radius: 25,
+                      child: Icon(
+                        Icons.style_rounded,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text('Fashion'),
-                ],
+                    Text('Fashion'),
+                  ],
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ItemScreen2(),
+                      ));
+                },
               ),
-              Column(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.purple,
-                    radius: 25,
-                    child: Icon(
-                      Icons.laptop_chromebook_rounded,
-                      color: Colors.white,
-                      size: 35,
+              InkWell(
+                child: const Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.purple,
+                      radius: 25,
+                      child: Icon(
+                        Icons.laptop_chromebook_rounded,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text('Electronics'),
-                ],
+                    Text('Electronics'),
+                  ],
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ItemScreen3(),
+                      ));
+                },
               ),
-              Column(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.purple,
-                    radius: 25,
-                    child: Icon(
-                      Icons.gamepad_rounded,
-                      color: Colors.white,
-                      size: 35,
+              InkWell(
+                child: const Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.purple,
+                      radius: 25,
+                      child: Icon(
+                        Icons.gamepad_rounded,
+                        color: Colors.white,
+                        size: 35,
+                      ),
                     ),
-                  ),
-                  Text('Games'),
-                ],
+                    Text('Games'),
+                  ],
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ItemScreen(),
+                      ));
+                },
               ),
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
+        const Padding(
+          padding: EdgeInsets.only(
             top: 20,
-            left: 30,
-            right: 30,
+            left: 20,
+            right: 20,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -267,8 +304,8 @@ class Body_New extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
+        const Padding(
+          padding: EdgeInsets.only(
             right: 38,
             left: 38,
             top: 25,
@@ -298,6 +335,7 @@ class Body_New extends StatelessWidget {
         ),
         SizedBox(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
@@ -313,29 +351,21 @@ class Body_New extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const FeedScreen()));
                       },
-                      child: Container(
-                        padding: EdgeInsets.only(
-                          left: 10,
-                          right: 5,
-                          top: 20,
-                          bottom: 20,
-                        ),
-                        child: Image.asset(
-                          'asset/Image/shoes.webp',
-                          cacheHeight: 100,
-                          cacheWidth: 100,
-                        ),
+                      child: Image.asset(
+                        'asset/Image/shoes.webp',
+                        cacheHeight: 100,
+                        cacheWidth: 100,
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     'Shoes',
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 16,
                     ),
                   ),
-                  Text(
+                  const Text(
                     'Rs 3500',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
@@ -346,27 +376,19 @@ class Body_New extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                      left: 10,
-                      right: 10,
-                      top: 20,
-                      bottom: 20,
-                    ),
-                    child: Image.asset(
-                      'asset/Image/Chair.jpg',
-                      cacheHeight: 100,
-                      cacheWidth: 100,
-                    ),
+                  Image.asset(
+                    'asset/Image/Chair.jpg',
+                    cacheHeight: 100,
+                    cacheWidth: 100,
                   ),
-                  Text(
+                  const Text(
                     'Chair',
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 16,
                     ),
                   ),
-                  Text(
+                  const Text(
                     'Rs 1500',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
@@ -378,7 +400,7 @@ class Body_New extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       left: 10,
                       right: 10,
                       top: 20,
@@ -390,14 +412,112 @@ class Body_New extends StatelessWidget {
                       cacheWidth: 100,
                     ),
                   ),
-                  Text(
+                  const Text(
                     'Guitar',
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 16,
                     ),
                   ),
-                  Text(
+                  const Text(
+                    'Rs 15000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                    ),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const FeedScreen()));
+                      },
+                      child: Image.asset(
+                        'asset/Image/shoes.webp',
+                        cacheHeight: 100,
+                        cacheWidth: 100,
+                      ),
+                    ),
+                  ),
+                  const Text(
+                    'Shoes',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16,
+                    ),
+                  ),
+                  const Text(
+                    'Rs 3500',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Image.asset(
+                    'asset/Image/Chair.jpg',
+                    cacheHeight: 100,
+                    cacheWidth: 100,
+                  ),
+                  const Text(
+                    'Chair',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16,
+                    ),
+                  ),
+                  const Text(
+                    'Rs 1500',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                      right: 10,
+                      top: 20,
+                      bottom: 20,
+                    ),
+                    child: Image.asset(
+                      'asset/Image/guitar.webp',
+                      cacheHeight: 100,
+                      cacheWidth: 100,
+                    ),
+                  ),
+                  const Text(
+                    'Guitar',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16,
+                    ),
+                  ),
+                  const Text(
                     'Rs 15000',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,

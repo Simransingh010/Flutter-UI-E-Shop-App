@@ -1,6 +1,7 @@
 import 'package:e_shop_clone/Screens/Body_new.dart';
 import 'package:e_shop_clone/Screens/Drawer.dart';
 import 'package:e_shop_clone/Screens/SearchBox.dart';
+import 'package:e_shop_clone/Screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -10,7 +11,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
         toolbarHeight: 100.0,
         backgroundColor: Colors.purple,
@@ -31,6 +32,17 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CartScreen(),
+                  ));
+            },
+            icon: Icon(Icons.shopping_cart),
+            color: Colors.white,
+          )
           // Image.asset('asset/Image/avatar.jpeg'),
         ],
       ),

@@ -1,5 +1,4 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class FeedScreen extends StatefulWidget {
@@ -15,7 +14,7 @@ class _FeedScreenState extends State<FeedScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(10))),
         toolbarHeight: 70.0,
         backgroundColor: Colors.purple,
@@ -25,14 +24,14 @@ class _FeedScreenState extends State<FeedScreen> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back_ios,
               color: Colors.white,
               size: 30,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 120),
+          const Padding(
+            padding: EdgeInsets.only(left: 120),
             child: Text(
               'Product',
               style: TextStyle(
@@ -46,7 +45,7 @@ class _FeedScreenState extends State<FeedScreen> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.more_vert_sharp,
               color: Colors.white,
               size: 30,
@@ -57,7 +56,7 @@ class _FeedScreenState extends State<FeedScreen> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 30, top: 10, bottom: 10),
+            padding: const EdgeInsets.only(left: 30, top: 10, bottom: 10),
             child: SizedBox(
               height: 280,
               width: 420,
@@ -66,42 +65,42 @@ class _FeedScreenState extends State<FeedScreen> {
                   CarouselSlider(
                     items: [
                       Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image:
                                   AssetImage('asset/Image/airforce_pic_1.png'),
                               fit: BoxFit.cover),
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.all(10.0),
+                        margin: const EdgeInsets.all(10.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image:
                                   AssetImage('asset/Image/airforce_pic_2.png'),
                               fit: BoxFit.cover),
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.all(10.0),
+                        margin: const EdgeInsets.all(10.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image:
                                   AssetImage('asset/Image/airforce_pic_3.png'),
                               fit: BoxFit.cover),
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.all(10.0),
+                        margin: const EdgeInsets.all(10.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('asset/Image/airforce_pic_4.png'),
+                              image: const AssetImage(
+                                  'asset/Image/airforce_pic_4.png'),
                               fit: BoxFit.cover),
                         ),
                       ),

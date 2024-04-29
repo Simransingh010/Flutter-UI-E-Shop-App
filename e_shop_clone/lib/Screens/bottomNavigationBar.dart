@@ -1,4 +1,4 @@
-import 'package:e_shop_clone/Screens/cartScreen.dart';
+import 'package:e_shop_clone/Screens/cart_screen.dart';
 import 'package:e_shop_clone/Screens/feedScreen.dart';
 import 'package:e_shop_clone/Screens/home.dart';
 import 'package:e_shop_clone/Screens/inboxScreen.dart';
